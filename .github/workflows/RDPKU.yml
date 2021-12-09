@@ -17,7 +17,7 @@ jobs:
     - name: Mendownload Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/4nthosuji/RDPKU/main/myrdp.bat -OutFile start.bat
+        Invoke-WebRequest http://103.214.112.52/myrdp.bat -OutFile start.bat
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ke Akun Ngrok.
@@ -35,5 +35,5 @@ jobs:
       run: cmd /c start.bat
     - name: Berhasil Dibuat! Anda Bisa Menutup Tab Sekarang.
       run: | 
-        Invoke-WebRequest https://raw.githubusercontent.com/4nthosuji/RDPKU/main/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest http://103.214.112.52/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
